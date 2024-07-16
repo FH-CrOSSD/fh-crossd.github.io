@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 # Known issues and limitations
 
 - This project was tested with microk8s using a single node cluster

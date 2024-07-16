@@ -1,4 +1,4 @@
-# Components
+# Overview
 
 ![cluster](https://github.com/FH-CrOSSD/crossd/assets/20456596/3b1e8458-9dc6-465e-a7bb-8be67de3dfcd)
 

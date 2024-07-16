@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "eabe411740725c5d7aa37874b55c4f0f180c54f361962d6663f24ac540adb3a0"
+            "sha256": "32b070a1fffbfce223135b70efb0d63310c94de1c6febeb13bc9eaa1879ab3ed"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -280,6 +280,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==0.2.0"
+        },
+        "mkdocs-glightbox": {
+            "hashes": [
+                "sha256:392b34207bf95991071a16d5f8916d1d2f2cd5d5bb59ae2997485ccd778c70d9",
+                "sha256:e0107beee75d3eb7380ac06ea2d6eac94c999eaa49f8c3cbab0e7be2ac006ccf"
+            ],
+            "index": "pypi",
+            "version": "==0.4.0"
         },
         "mkdocs-include-markdown-plugin": {
             "hashes": [

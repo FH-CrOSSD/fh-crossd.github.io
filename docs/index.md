@@ -1,4 +1,20 @@
+---
+hide:
+  - navigation
+  - toc
+---
 # CrOSSD
+
+## Project pages
+
+<div class="grid cards" markdown>
+
+- :fontawesome-solid-laptop-medical: [Health Monitor](https://health.crossd.tech)
+- :fontawesome-solid-blog: [Project Blog](https://crossd.tech)
+
+</div>
+
+## About
 
 The Critical Open-Source Software Database (CrOSSD) is an open-source software (OSS) project
 meant to assist a variety of stakeholders to make informed decisions about which OSS projects to

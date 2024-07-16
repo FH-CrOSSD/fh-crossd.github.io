@@ -9,6 +9,7 @@ pymdown-extensions = "*"
 mkdocs-include-markdown-plugin = "*"
 mdx-truly-sane-lists = "*"
 mkdocs-material = "*"
+mkdocs-glightbox = "*"
 
 [dev-packages]
 
