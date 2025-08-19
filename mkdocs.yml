@@ -36,7 +36,7 @@ extra:
   #   - icon: fontawesome/solid/blog
   #     link: https://crossd.tech
   #     name: crossd.tech
-copyright: Copyright &copy; 2024 St. Pölten University of Applied Sciences
+copyright: Copyright &copy; 2025 St. Pölten University of Applied Sciences
 repo_url: https://github.com/fh-crossd
 markdown_extensions:
   - admonition
