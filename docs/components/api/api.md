@@ -64,7 +64,7 @@ curl https://health.crossd.tech/api/snapshots -X POST -d "{\"term\":\"Peacexo/PA
 
 ## `/api/metrics`
 
-Returns the metrics of a snapshots of a given project.
+Returns the metrics of a snapshot of a given project.
 
 Properties:
 
@@ -92,4 +92,63 @@ Example:
 
 ```bash
 curl https://health.crossd.tech/api/metrics -X POST -d "{\"term\":\"Peacexo/PAJAApp\",\"timestamp\":1712087894.7108583}" -H "Content-Type: application/json"
+```
+
+---
+
+## `/api/metrics/avg`
+
+Returns the average values of a selected set of metrics.
+
+Properties:
+
+|                      |                  |
+| -------------------- | ---------------- |
+| Allowed HTTP Methods | POST             |
+| Content-Type         | application/json |
+
+Responses:
+
+| Code | Description                           |
+| ---- | ------------------------------------- |
+| 200  | Success                               |
+
+Example:
+
+```bash
+curl https://health.crossd.tech/api/metrics/avg -X POST
+```
+
+---
+
+## `/api/repo`
+
+Returns the retrieved repository data a snapshot of a given project.
+
+Properties:
+
+|                      |                  |
+| -------------------- | ---------------- |
+| Allowed HTTP Methods | POST             |
+| Content-Type         | application/json |
+
+Parameters:
+
+| Name      | Description                          | Type   | Format                              | Required |
+| --------- | ------------------------------------ | ------ | ----------------------------------- | -------- |
+| term      | project identifier (e.g. owner/name) | string | alphanumeric characters and `-\_./` | Yes      |
+| timestamp | timestamp of a snapshot              | number | epoch timestamp in seconds          | Yes      |
+
+Responses:
+
+| Code | Description                           |
+| ---- | ------------------------------------- |
+| 200  | Success                               |
+| 400  | malformed JSON body                   |
+| 422  | Parameters missing or in wrong format |
+
+Example:
+
+```bash
+curl https://health.crossd.tech/api/repo -X POST -d "{\"term\":\"Peacexo/PAJAApp\",\"timestamp\":1712087894.7108583}" -H "Content-Type: application/json"
 ```
