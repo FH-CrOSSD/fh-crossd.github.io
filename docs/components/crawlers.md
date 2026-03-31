@@ -2,11 +2,10 @@
 
 These pods retrieve the necessary information about repositories and calculate our [defined metrics](https://health.crossd.tech/doc) for assessing the health of OSS projects.
 
-## Secrets
+## Secrets used by all workers
 
 - arango-worker-pwd
 - redis-auth
-- ghtoken
 
 ## Interacting Components
 
@@ -17,7 +16,11 @@ These pods retrieve the necessary information about repositories and calculate o
 
 A Python [Celery](https://docs.celeryq.dev/en/stable/#) worker that queries GitHub mostly via GraphQL, but also via REST API and crawls the github.com repository pages.
 
-Stores the results in the `repositories` collection in ArangoDB and calls the subsequent task for calculating the metrics processed by m-drone.
+Stores the results in the `repositories` and `commits` collections in ArangoDB and calls the subsequent task for calculating the metrics processed by m-drone. Depending on the configuration, it can also call the subsequent task for calculating the metrics processed by llm-drone.
+
+### Secrets
+
+- ghtoken
 
 ## m-drone
 
@@ -25,10 +28,14 @@ A Python [Celery](https://docs.celeryq.dev/en/stable/#) worker that receives the
 
 Stores the results in the `metrics` collection in ArangoDB.
 
-## bak-rest-drone
+### Secrets
 
-A Python [Celery](https://docs.celeryq.dev/en/stable/#) worker that queries GitHub mostly REST API, but also crawls the github.com repository pages.
+- ghtoken
 
-Stores the data about the repositories in the `bak_repos` and the calculated metrics in the `bak_metrics` collection in ArangoDB.
+## llm-drone
 
-We mostly use the [source code](https://github.com/JacquelineSchmatz/MDI_Thesis) developed by Jacqueline Schmatz for her master thesis (with some modifications). The metrics Jacqueline Schmatz chose are listed [here](https://health.crossd.tech/doc).
+A Python [Celery](https://docs.celeryq.dev/en/stable/#) worker that receives the results from c-drone and calculates metrics using a large language model (LLM) via ollama API.
+
+### Secrets
+
+- llm-auth

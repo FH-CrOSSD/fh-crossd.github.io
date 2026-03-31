@@ -2,6 +2,10 @@
 Our web interface contains API endpoints to query the collected projects and metrics.
 You can use them either on your own instance of our project or you can query the data of our public instance.
 
+!!! info
+    The data provided by these endpoints of our [public instance](https://health.crossd.tech) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+
 ## `/api/projects`
 
 Returns all queried projects from the database.

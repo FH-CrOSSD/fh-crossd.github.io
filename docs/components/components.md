@@ -1,6 +1,6 @@
 # Overview
 
-![cluster](https://github.com/FH-CrOSSD/crossd/assets/20456596/3b1e8458-9dc6-465e-a7bb-8be67de3dfcd)
+![cluster](https://github.com/user-attachments/assets/8cd09c54-0c60-4e94-b8b7-287f68969988)
 
 Our project uses [MicroK8s](https://microk8s.io/) and in turn various components which are realised as Kubernetes Pods, Deployments, etc.
 

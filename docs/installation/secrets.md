@@ -73,6 +73,14 @@ Properties:
 
 - RAUTH
 
+## llm-auth
+
+Used by the llm worker to authenticate to the ollama compatible API.
+
+Properties:
+
+- LLM_AUTH_TOKEN
+
 !!! warning
     **All** secrets inside the yaml files need to be **base64** encoded.  
     **Ensure the file permissions are set accordingly** (although they are also set in the setup script.)  

@@ -15,10 +15,16 @@ Collections inside the `crossd` database:
   - Stores information about repositories collected by c-drone
 - metrics
   - Stores results of calculated metrics provided by m-drone
-- bak_repos
+- bak_repos (legacy)
   - Stores information about repositories collected by bak-rest-drone
-- bak_metrics
+- bak_metrics (legacy)
   - Stores results of calculated metrics provided by bak-rest-drone
+- groups
+  - Stores tags of repositories that belong to a specific group
+- ai-metrics
+  - Stores results of calculated metrics provided by llm-drone
+- commits
+  - Stores information about commits of repositories collected by c-drone
 
 ## Secrets
 
@@ -41,5 +47,5 @@ Collections inside the `crossd` database:
 - Add Task Job
 - m-drone
 - c-drone
-- bak-rest-drone
+- llm-drone
 - Arango Init Job
