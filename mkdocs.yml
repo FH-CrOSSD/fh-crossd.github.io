@@ -61,6 +61,7 @@ plugins:
   - glightbox
 nav:
   - index.md
+  - "Usage Guide": intro/intro.md
   - Installation:
     - installation/guide.md
     - installation/requirements.md
